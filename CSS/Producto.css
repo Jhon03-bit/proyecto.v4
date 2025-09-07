@@ -1,0 +1,149 @@
+/*
+===============================
+Estilos Generales
+===============================
+*/
+/* Estilos para productos con imagen a la izquierda y texto a la derecha */
+.main3 {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Espacio entre cada tarjeta de producto */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px); /* Efecto de elevación al pasar el mouse */
+}
+
+/*
+===============================
+Contenido de la Tarjeta
+===============================
+*/
+.product-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.product-content img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-text {
+  flex: 1;
+}
+
+.product-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/*
+===============================
+Botón de WhatsApp
+===============================
+*/
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #25D366; /* Verde de WhatsApp */
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button img {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #20b955;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.whatsapp-button:hover img {
+  transform: scale(1.2);
+}
+
+.whatsapp-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/*
+===============================
+Responsividad
+===============================
+*/
+@media (max-width: 768px) {
+  .product-item {
+    flex-direction: column; /* Apila la imagen y el texto en columnas */
+    text-align: center;
+  }
+  
+  .product-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .product-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .whatsapp-button {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+  
+  .product-text {
+    text-align: center;
+  }
+}

@@ -1,0 +1,115 @@
+/* Estilos generales de la sección */
+.location-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 4px;
+  background-color: #4CAF50;
+  margin: 10px auto 0;
+}
+
+/* Contenedor principal para la grilla de contenido */
+.location-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contenedor del mapa y los detalles */
+.location-map-details {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.location-map-details h3 {
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.location-details p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.location-details strong {
+  color: #333;
+}
+
+/* Contenedor para la imagen de referencia visual */
+.location-visual-reference {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para los botones */
+.btn-green {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-green:hover {
+  background-color: #45a049;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .location-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
